@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { apiUrl } from '../api/apiUrl';
 import { useEffect, useState } from 'react';
+import StarRating from '../components/StarRating';
 import useStore from '../store/cart';
 
 export default function ProductPage() {
@@ -84,6 +85,7 @@ export default function ProductPage() {
                 <div className='item-review' key={review.id}>
                   <h4>{review.username} wrote:</h4>
                   <p>{review.description}</p>
+                  <StarRating rating={review.rating} />
                 </div>
               ))
             : null}
