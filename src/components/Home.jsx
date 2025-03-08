@@ -35,7 +35,8 @@ export default function Home() {
   const productsEl = filteredProducts.map((product) => (
     <div key={product.id} className='product-tile'>
       <Link to={`/product/${product.id}`}>
-        <img src={product.imageUrl} alt='' />
+        <img src={product.image.url} alt='' />
+
         <div className='product-info'>
           <h3>{product.title}</h3>
           <p className='item-price'>
@@ -58,7 +59,7 @@ export default function Home() {
       {isError && <div>{isError}</div>}
       {products && (
         <div className='product-list-container'>
-          <h1>Explore our products</h1>
+          <h1>Browse our products</h1>
           <input
             type='text'
             placeholder='Search products...'

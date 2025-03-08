@@ -72,7 +72,7 @@ header .cart-icon {
 }
 
 .item-price {
-  color: #9e1416;
+  color: #de2124;
   font-weight: 600;
 }
 
@@ -82,8 +82,8 @@ header .cart-icon {
   top: -5px;
   left: 0px;
   background-color: #fff;
-  color: #9e1416;
-  border: 1px solid #9e1416;
+  color: #de2124;
+  border: 1px solid #de2124;
   border-radius: 50%;
   text-align: center;
   height: 25px;
@@ -146,7 +146,7 @@ main {
   text-align: center;
   text-decoration: none;
   border: none;
-  background-color: #1b6c7b;
+  background-color: #2560cd;
   padding: 0.75rem 1.375rem;
   color: #fff;
   font-weight: 700;
@@ -306,30 +306,6 @@ footer {
   transform: translate(1px, 1px);
 }
 
-/*** HOME PAGE ***/
-.home-container {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)),
-    url('./assets/images/home-hero.png') no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  min-height: 350px;
-  color: white;
-  padding: 45px 23px;
-}
-
-.home-container h1 {
-  font-weight: 700;
-
-  font-size: 2.25rem;
-  line-height: 42px;
-}
-
-.home-container p {
-  line-height: 24px;
-}
-
 /* SHOPPING CART */
 ul {
   list-style: none;
@@ -349,7 +325,7 @@ ul {
   text-align: center;
   text-decoration: none;
   border: none;
-  background-color: #1b6c7b;
+  background-color: #2560cd;
   padding: 0.75rem 1.375rem;
   color: #fff;
   font-weight: 700;
@@ -365,12 +341,12 @@ ul {
   padding: 4px 8px;
 }
 .remove-item-button {
-  background-color: #c20f0f;
+  background-color: #de2124;
   padding: 5px 10px;
 }
 
 .clear-cart-button {
-  background-color: #9e1416;
+  background-color: #de2124;
 }
 
 .checkout-cart-button,

@@ -1,4 +1,6 @@
 import { useForm } from 'react-hook-form';
+import { useState } from 'react';
+
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
@@ -20,8 +22,12 @@ export default function ContactPage() {
     resolver: yupResolver(schema),
   });
 
+  const [successMessage, setSuccessMessage] = useState('');
+
   function onSubmit(data) {
+    setSuccessMessage('Your message has been sent, and we will get in touch with you soon.');
     console.log(data);
+
   }
 
   return (
@@ -50,7 +56,9 @@ export default function ContactPage() {
         </label>
 
         <button>Send</button>
+        {successMessage && <div className='success-message'>{successMessage}</div>}
       </form>
+
     </div>
   );
 }

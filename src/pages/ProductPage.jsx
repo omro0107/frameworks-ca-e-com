@@ -7,12 +7,18 @@ export default function ProductPage() {
   const { addToCart } = useStore();
 
   const handleAddToCart = (item) => {
+    setSuccessMessage('Added to cart!');
+    setTimeout(() => {
+      setSuccessMessage('');
+    }, 3000);
+
     const newItem = {
       id: item.id,
       name: item.title,
       price: item.price,
-      img: item.imageUrl,
+      img: item.image.url,
     };
+
     addToCart(newItem);
   };
 
@@ -20,6 +26,8 @@ export default function ProductPage() {
 
   const [item, setItem] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
+
   const [isError, setIsError] = useState(null);
 
   useEffect(() => {
@@ -28,7 +36,8 @@ export default function ProductPage() {
         const response = await fetch(apiUrl + id);
         const data = await response.json();
 
-        setItem(data);
+        setItem(data.data);
+
       } catch (error) {
         setIsError(error.message);
       } finally {
@@ -44,10 +53,13 @@ export default function ProductPage() {
       {isLoading && <div>Loading products...</div>}
       {isError && <div>{isError}</div>}
 
+      {successMessage && <div>{successMessage}</div>}
       {item ? (
+
         <div className='item-detail-container' key={item.id}>
-          <img
-            src={item.imageUrl}
+            <img
+                src={item.image.url}
+
             alt='Image of a product'
             className='item-img'
           />
@@ -61,9 +73,10 @@ export default function ProductPage() {
                 )}$)`
               : item.price}
           </p>
-          <button className='link-button' onClick={() => handleAddToCart(item)}>
-            Add to cart
+          <button className='link-button' onClick={() => handleAddToCart(item)}> Add to cart
           </button>
+          {successMessage && <div>{successMessage}</div>}
+
           {item.reviews.length >= 1 && <h3>Reviews:</h3>}
 
           {item.reviews
