@@ -119,13 +119,6 @@ The application integrates with the Noroff API for product data. The API endpoin
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## Contact
-
-For questions or support, please reach out through:
-
-- GitHub Issues: [Create an issue](https://github.com/your-username/your-repo/issues)
-- Email: your-email@example.com
-
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
