@@ -1,70 +1,137 @@
-# Swiftcart
+# SwiftCart
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+![SwiftCart E-commerce Application](/public/assets/readme.png)
 
-A simple overview of the use/purpose of the project.
+A modern React-based e-commerce application for browsing and purchasing products online.
 
 ## Description
 
-Add a more detailed description of what your project entails and set out to do.
+SwiftCart is a fully functional e-commerce web application built with React. It provides users with a seamless shopping experience including product browsing, search functionality, shopping cart management, and checkout process.
 
-You can add some bullet points if you'd like to:
+Key features include:
 
-- List item 1
-- List item 2
-- List item 3
+- Product catalog with search functionality
+- Individual product detail pages with reviews and ratings
+- Shopping cart with quantity management
+- Checkout process with order confirmation
+- Responsive design for all devices
+- Contact form with validation
 
 ## Built With
 
-You can list a the tech stack that you've used over here
+This project is built using modern web technologies:
 
-- [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com)
+- [React.js](https://reactjs.org/) - Frontend framework
+- [React Router](https://reactrouter.com/) - Client-side routing
+- [Zustand](https://github.com/pmndrs/zustand) - State management
+- [React Hook Form](https://react-hook-form.com/) - Form handling
+- [Yup](https://github.com/jquense/yup) - Form validation
+- [FontAwesome](https://fontawesome.com/) - Icons
+- [Vite](https://vitejs.dev/) - Build tool and development server
 
 ## Getting Started
 
 ### Installing
 
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
-
-1. Clone the repo:
+1. Clone the repository:
 
 ```bash
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
+git clone [your-repo-url]
 ```
 
-2. Install the dependencies:
+2. Navigate to the project directory:
 
+```bash
+cd frameworks-ca-e-com
 ```
+
+3. Install the dependencies:
+
+```bash
 npm install
 ```
 
 ### Running
 
-Here is where you detail how to run the app. It typically involves the commands you'd need to run to start the project e.g.
-
-To run the app, run the following commands:
+To run the application in development mode:
 
 ```bash
-npm run start
+npm run dev
 ```
+
+The application will be available at `http://localhost:5173`
+
+To build for production:
+
+```bash
+npm run build
+```
+
+To preview the production build:
+
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+│   ├── Carticon.jsx    # Shopping cart icon with counter
+│   ├── Footer.jsx      # Site footer
+│   ├── Header.jsx      # Site navigation header
+│   ├── Home.jsx        # Homepage product listing
+│   ├── Layout.jsx      # Main layout wrapper
+│   ├── NotFound.jsx    # 404 error page
+│   └── StarRating.jsx  # Product rating display
+├── pages/              # Page components
+│   ├── CheckoutPage.jsx        # Shopping cart and checkout
+│   ├── CheckoutSuccessPage.jsx # Order confirmation
+│   ├── ContactPage.jsx         # Contact form
+│   └── ProductPage.jsx         # Individual product details
+├── store/              # State management
+│   └── cart.jsx        # Shopping cart store
+├── api/                # API configuration
+│   └── apiUrl.jsx      # API endpoint configuration
+└── App.jsx             # Main application component
+```
+
+## Features
+
+- **Product Browsing**: View all available products with images and pricing
+- **Search Functionality**: Filter products by name
+- **Product Details**: Detailed product information with customer reviews
+- **Shopping Cart**: Add/remove items, adjust quantities
+- **Checkout Process**: Complete purchase flow with order confirmation
+- **Contact Form**: Get in touch with form validation
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
+
+## API Integration
+
+The application integrates with the Noroff API for product data. The API endpoint is configured in `src/api/apiUrl.jsx`.
 
 ## Contributing
 
-Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## Contact
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
+For questions or support, please reach out through:
 
-[My Twitter page](www.twitter.com)
-
-[My LinkedIn page](www.linkedin.com)
+- GitHub Issues: [Create an issue](https://github.com/your-username/your-repo/issues)
+- Email: your-email@example.com
 
 ## License
 
-You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
+- Noroff School of Technology for the API and project requirements
+- React community for excellent documentation and resources
+- FontAwesome for the icon library
