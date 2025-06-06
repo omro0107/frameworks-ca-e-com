@@ -2,6 +2,11 @@ import { apiUrl } from '../api/apiUrl';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+/**
+ * Home page component that displays a list of products with search functionality
+ * @returns {JSX.Element} A div containing product list, search input, and loading/error states
+ * @component
+ */
 export default function Home() {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);

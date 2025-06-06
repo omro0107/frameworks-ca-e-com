@@ -1,6 +1,11 @@
 import { Link, NavLink } from 'react-router-dom';
 import CartIcon from './Carticon';
 
+/**
+ * Header component that displays site navigation and logo
+ * @returns {JSX.Element} A header element containing site logo, navigation links, and cart icon
+ * @component
+ */
 export default function Header() {
   const activeStyles = {
     fontWeight: 'bold',

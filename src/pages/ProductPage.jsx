@@ -4,9 +4,23 @@ import { useEffect, useState } from 'react';
 import StarRating from '../components/StarRating';
 import useStore from '../store/cart';
 
+/**
+ * Product detail page component that displays individual product information
+ * @returns {JSX.Element} A div containing product details, add to cart functionality, and reviews
+ * @component
+ */
 export default function ProductPage() {
   const { addToCart } = useStore();
 
+  /**
+   * Handles adding an item to the cart
+   * @param {Object} item - The product item to add to cart
+   * @param {string} item.id - Product ID
+   * @param {string} item.title - Product title
+   * @param {number} item.price - Product price
+   * @param {Object} item.image - Product image object
+   * @param {string} item.image.url - Product image URL
+   */
   const handleAddToCart = (item) => {
     setSuccessMessage('Added to cart!');
     setTimeout(() => {
@@ -50,7 +64,7 @@ export default function ProductPage() {
   }, [params.id]);
 
   return (
-    <>
+    <div>
       {isLoading && <div>Loading products...</div>}
       {isError && <div>{isError}</div>}
 
@@ -58,9 +72,8 @@ export default function ProductPage() {
       {item ? (
 
         <div className='item-detail-container' key={item.id}>
-            <img
-                src={item.image.url}
-
+          <img
+            src={item.image.url}
             alt='Image of a product'
             className='item-img'
           />
@@ -74,7 +87,8 @@ export default function ProductPage() {
                 )}$)`
               : item.price}
           </p>
-          <button className='link-button' onClick={() => handleAddToCart(item)}> Add to cart
+          <button className='link-button' onClick={() => handleAddToCart(item)}>
+            Add to cart
           </button>
           {successMessage && <div>{successMessage}</div>}
 
@@ -93,6 +107,6 @@ export default function ProductPage() {
       ) : (
         <h2>Loading...</h2>
       )}
-    </>
+    </div>
   );
 }

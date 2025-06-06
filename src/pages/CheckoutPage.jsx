@@ -1,6 +1,11 @@
 import { Link } from 'react-router-dom';
 import useStore from '../store/cart';
 
+/**
+ * Checkout page component that displays cart items and checkout functionality
+ * @returns {JSX.Element} A div containing cart items list, quantity controls, and checkout button
+ * @component
+ */
 export default function CheckoutPage() {
   const { cart, addToCart, removeFromCart, clearCart } = useStore();
   const handleAddToCart = (item) => {

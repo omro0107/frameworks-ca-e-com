@@ -1,5 +1,10 @@
 import { Link } from 'react-router-dom';
 
+/**
+ * Checkout success page component that displays order confirmation
+ * @returns {JSX.Element} A div containing success message and link back to home
+ * @component
+ */
 export default function CheckoutSuccessPage() {
   return (
     <div>

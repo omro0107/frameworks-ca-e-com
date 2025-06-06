@@ -1,9 +1,13 @@
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
-
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
+/**
+ * Contact form page component with form validation
+ * @returns {JSX.Element} A form container with input fields for name, subject, email, and message
+ * @component
+ */
 export default function ContactPage() {
   const schema = yup
     .object({
@@ -24,10 +28,8 @@ export default function ContactPage() {
 
   const [successMessage, setSuccessMessage] = useState('');
 
-  function onSubmit(data) {
+  function onSubmit() {
     setSuccessMessage('Your message has been sent, and we will get in touch with you soon.');
-    console.log(data);
-
   }
 
   return (
